@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eternal Eclipse</title>
+    <meta
+      name="description"
+      content="Eternal Eclipse 게임 소개 페이지"
+    />
+    <link rel="stylesheet" href="./Page/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Eternal Eclipse</p>
+        <h1>영원한 어둠이 찾아온 도시</h1>
+        <p class="hero-text">
+          빛이 사라진 도시에서 살아남기 위해, 밤의 그림자와 맞서야 하는
+          서사가 시작됩니다.
+        </p>
+      </div>
+
+      <nav class="top-nav" aria-label="게임 소개 메뉴">
+        <button class="nav-link active" data-tab="world" type="button">세계관</button>
+        <button class="nav-link" data-tab="system" type="button">시스템</button>
+        <button class="nav-link" data-tab="download" type="button">다운로드</button>
+        <button class="nav-link" data-tab="credits" type="button">제작자</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card tab-panel active" data-panel="world">
+        <h2>게임 세계관 설명</h2>
+        <p>
+          도시의 모든 거리는 멈춘 듯이 고요하고, 사람들의 숨결마저 희미해진다.
+          오래된 문명은 어둠 속에 잠식되었고, 이제 남은 자들은 서로의 믿음과
+          기억을 지켜내야 한다.
+        </p>
+        <p>
+          플레이어는 빛을 잃은 도시의 마지막 희망으로, 폐허가 된 거리와
+          숨겨진 지하 공간을 탐험하며 진실을 파헤친다.
+        </p>
+      </section>
+
+      <section class="card tab-panel" data-panel="system">
+        <h2>게임 시스템 설명</h2>
+        <ul class="feature-list">
+          <li>탐험 중심의 서사형 진행</li>
+          <li>자원 관리와 위험한 선택의 갈등</li>
+          <li>상황에 따라 달라지는 전투와 회피 시스템</li>
+          <li>도시의 여러 구역을 탐색하며 숨겨진 비밀 발견</li>
+        </ul>
+      </section>
+
+      <section class="card tab-panel" data-panel="download">
+        <h2>게임 다운로드</h2>
+        <p>
+          현재는 PC 버전 중심으로 준비되었고, 모바일 버전은 이후 확장할 수 있도록
+          구조를 미리 분리해 두었습니다.
+        </p>
+        <div class="download-grid">
+          <article class="download-card">
+            <h3>PC 버전</h3>
+            <p>Windows용 실행 파일을 제공합니다.</p>
+            <a href="#" class="button primary">PC 다운로드</a>
+          </article>
+          <article class="download-card">
+            <h3>모바일 버전</h3>
+            <p>Android / iOS용 배포는 향후 업데이트 예정입니다.</p>
+            <a href="#" class="button secondary disabled">준비 중</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="card tab-panel" data-panel="credits">
+        <h2>게임 제작자 탭</h2>
+        <p>
+          제작: 팀 Eclipse<br />
+          기획/디자인: [이름 입력]<br />
+          프로그래밍: [이름 입력]<br />
+          아트/사운드: [이름 입력]
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const tabs = document.querySelectorAll('.nav-link, .button[data-tab]');
+      const panels = document.querySelectorAll('.tab-panel');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const target = tab.dataset.tab;
+
+          tabs.forEach((button) => button.classList.toggle('active', button === tab));
+          panels.forEach((panel) => {
+            panel.classList.toggle('active', panel.dataset.panel === target);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
