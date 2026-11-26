@@ -6,18 +6,21 @@
     <title>Eternal Eclipse</title>
     <meta
       name="description"
-      content="영원한 어둠이 찾아온 도시, Eternal Eclipse의 게임 소개 페이지"
+      content="해가 뜨지 않는 세계에서 하루를 더 버티는 턴제 아포칼립스 생존 시뮬레이션, Eternal Eclipse"
     />
+    <meta name="theme-color" content="#08080a" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="hero">
       <div class="hero-content">
+        <div class="eclipse" aria-hidden="true"></div>
         <p class="eyebrow">Eternal Eclipse</p>
-        <h1>영원한 어둠이 찾아온 도시</h1>
+        <h1>해가 뜨지 않는 세계</h1>
         <p class="hero-text">
-          빛이 사라진 도시에서 살아남기 위해, 밤의 그림자와 맞서야 하는
-          서사가 시작됩니다.
+          어둠에 잠식된 세계, 법도 전기도 끊긴 도시에서 살아남아라.<br />
+          줄어드는 식량과 기력, 다가오는 광기 속에서 하루를 더 버티는
+          턴제 아포칼립스 생존 시뮬레이션.
         </p>
       </div>
 
@@ -31,50 +34,65 @@
 
     <main>
       <section class="card tab-panel active" data-panel="world">
-        <h2>게임 세계관 설명</h2>
+        <h2>세계관</h2>
+        <p class="quote">뻗어오는 악의, 침식하는 광신 속에서 생존하라.</p>
         <p>
-          도시의 모든 거리는 멈춘 듯이 고요하고, 사람들의 숨결마저 희미해진다.
-          오래된 문명은 어둠 속에 잠식되었고, 이제 남은 자들은 서로의 믿음과
-          기억을 지켜내야 한다.
+          2137년 9월 29일 낮, 아무런 전조도 없이 하늘이 장막에 뒤덮였다.
+          <strong>아스포델 장막</strong>이라 이름 붙은 그것은 12시간 만에 지구 전체를
+          감쌌고, 어둠을 따라 추위가 내려앉기 시작했다.
         </p>
         <p>
-          플레이어는 빛을 잃은 도시의 마지막 희망으로, 폐허가 된 거리와
-          숨겨진 지하 공간을 탐험하며 진실을 파헤친다.
+          사람들은 병들거나, 약탈자가 되거나, 어둠을 숭배하는 교단에 몸을 맡겼다.
+          통신은 하나둘 끊기고, 남은 것은 라디오 너머의 목소리뿐.
+          당신은 무너진 도시에서 홀로 하루하루를 버텨야 한다.
         </p>
       </section>
 
       <section class="card tab-panel" data-panel="system">
-        <h2>게임 시스템 설명</h2>
+        <h2>시스템</h2>
         <ul class="feature-list">
-          <li>탐험 중심의 서사형 진행</li>
-          <li>자원 관리와 위험한 선택의 갈등</li>
-          <li>상황에 따라 달라지는 전투와 회피 시스템</li>
-          <li>도시의 여러 구역을 탐색하며 숨겨진 비밀 발견</li>
+          <li><strong>하루는 낮·저녁·밤, 세 번의 선택</strong> — 행동마다 시간과 기력이 줄어든다. 탐색할 것인가, 쉴 것인가, 떠날 것인가.</li>
+          <li><strong>무게로 관리하는 소지품</strong> — 가져갈 수 있는 것은 한정되어 있다. 음식은 상하고, 무기와 도구는 닳는다.</li>
+          <li><strong>제작</strong> — 사과 한 알도, 야구방망이 한 자루도 손을 거치면 다른 무언가가 된다.</li>
+          <li><strong>예측할 수 없는 조우</strong> — 구역을 뒤질 때마다 물자, 생존자, 혹은 적과 마주친다.</li>
+          <li><strong>기록에 도전</strong> — 체력이 다하는 순간 남는 것은 "N일 생존"이라는 기록뿐.</li>
         </ul>
       </section>
 
       <section class="card tab-panel" data-panel="download">
-        <h2>게임 다운로드</h2>
+        <h2>다운로드</h2>
         <p>
-          현재는 PC 버전 중심으로 준비되었고, 모바일 버전은 이후 확장할 수 있도록
-          구조를 미리 분리해 두었습니다.
+          현재 PC Demo 버전을 준비 중이며, 출시에 앞서 클로즈 알파 테스터를 모집합니다.
         </p>
         <div class="download-grid">
           <article class="download-card">
             <h3>PC 버전</h3>
-            <p>Windows용 실행 파일을 제공합니다.</p>
-            <a href="#" class="button primary">PC 다운로드</a>
+            <p>Windows용 실행 파일을 제공합니다. 압축을 푼 뒤 <strong>Eclipse.exe</strong>를 실행하세요.</p>
+            <a
+              href="#"
+              class="button secondary disabled"
+              data-link="pcDownload"
+              data-label-ready="PC 다운로드"
+              data-download
+              aria-disabled="true"
+            >준비 중</a>
           </article>
           <article class="download-card">
-            <h3>모바일 버전</h3>
-            <p>Android / iOS용 배포는 향후 업데이트 예정입니다.</p>
-            <a href="#" class="button secondary disabled">준비 중</a>
+            <h3>클로즈 알파 테스트</h3>
+            <p>참여 신청 설문을 작성해 주시면 테스트 일정과 빌드를 안내해 드립니다.</p>
+            <a
+              href="#"
+              class="button secondary disabled"
+              data-link="survey"
+              data-label-ready="참여 신청하기"
+              aria-disabled="true"
+            >설문 준비 중</a>
           </article>
         </div>
       </section>
 
       <section class="card tab-panel" data-panel="credits">
-        <h2>게임 제작자 탭</h2>
+        <h2>제작자</h2>
         <p>
           제작: 팀 Eclipse<br />
           기획/디자인: [이름 입력]<br />
@@ -84,7 +102,32 @@
       </section>
     </main>
 
+    <footer class="footer">© Eternal Eclipse · Team Eclipse</footer>
+
     <script>
+      /* 외부 링크 설정 — URL만 채우면 해당 버튼이 자동으로 활성화된다. */
+      const SITE_LINKS = {
+        pcDownload: '../Downloads/Eclipse_v0_2_0_20261127_0107.zip', // PC 빌드 v0.2.0
+        survey: '', // 클로즈 알파 테스트 신청 설문 (작성 중)
+      };
+
+      document.querySelectorAll('[data-link]').forEach((link) => {
+        const url = SITE_LINKS[link.dataset.link];
+        if (!url) return;
+
+        link.href = url;
+        if (link.hasAttribute('data-download')) {
+          link.setAttribute('download', '');
+        } else {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        }
+        link.textContent = link.dataset.labelReady || link.textContent;
+        link.classList.remove('disabled');
+        link.classList.replace('secondary', 'primary');
+        link.removeAttribute('aria-disabled');
+      });
+
       const tabs = document.querySelectorAll('.nav-link, .button[data-tab]');
       const panels = document.querySelectorAll('.tab-panel');
 
